@@ -51,6 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(widget.title),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(size: 30, Icons.shopping_basket_outlined),
+      ),
 
       body: SafeArea(
         child: ListView.builder(
