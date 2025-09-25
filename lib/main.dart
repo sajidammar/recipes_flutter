@@ -17,7 +17,7 @@ class RecipeApp extends StatelessWidget {
       title: 'Recipe Calculator',
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
-          primary: Colors.grey,
+          primary: Colors.pink,
           secondary: Colors.black,
         ),
       ),
