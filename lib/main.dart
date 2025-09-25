@@ -2,6 +2,7 @@
 import 'recipe_detail.dart';
 import 'package:flutter/material.dart';
 import 'recipe.dart';
+
 void main() {
   runApp(const RecipeApp());
 }
@@ -87,7 +88,13 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            Image(image: AssetImage(recipe.imageUrl)),
+            Container(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Image(image: AssetImage(recipe.imageUrl)),
+            ),
             const SizedBox(height: 14.0),
 
             Text(
