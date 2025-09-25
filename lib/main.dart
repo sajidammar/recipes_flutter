@@ -1,7 +1,10 @@
 // import 'dart:ffi';
+import 'package:recipes/cart.dart';
+
 import 'recipe_detail.dart';
 import 'package:flutter/material.dart';
 import 'recipe.dart';
+
 void main() {
   runApp(const RecipeApp());
 }
@@ -17,7 +20,7 @@ class RecipeApp extends StatelessWidget {
       title: 'Recipe Calculator',
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
-          primary: Colors.grey,
+          primary: Colors.yellow,
           secondary: Colors.black,
         ),
       ),
@@ -49,6 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(widget.title),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (cnon) => CartScreen()),
+          );
+        },
+        child: Icon(size: 30, Icons.shopping_basket_outlined),
       ),
 
       body: SafeArea(
@@ -87,7 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            Image(image: AssetImage(recipe.imageUrl)),
+            Container(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Image(image: AssetImage(recipe.imageUrl)),
+            ),
             const SizedBox(height: 14.0),
 
             Text(
