@@ -1,4 +1,6 @@
 // import 'dart:ffi';
+import 'package:recipes/cart.dart';
+
 import 'recipe_detail.dart';
 import 'package:flutter/material.dart';
 import 'recipe.dart';
@@ -52,7 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (cnon) => CartScreen()),
+          );
+        },
         child: Icon(size: 30, Icons.shopping_basket_outlined),
       ),
 

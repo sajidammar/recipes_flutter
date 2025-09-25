@@ -7,12 +7,13 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("سله المشتريات", style: TextStyle(fontSize: 20)),
       ),
       body: Center(
         child: Text(
           "هنا تعرض المشتريات",
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
     );
